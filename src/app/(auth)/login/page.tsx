@@ -15,6 +15,8 @@ import { useState } from "react";
 import { loginUser } from "@/lib/auth";
 import AuthGuard from "@/components/AuthGuard";
 import LoadingSpinner from "@/components/loader";
+import Image from "next/image"
+import Link from "next/link"
 
 export default function LoginPage() {
   const [email, setEmail] = useState<string>("");
@@ -28,8 +30,10 @@ export default function LoginPage() {
           {/* School Header */}
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
-              <div className="bg-primary p-3 rounded-full">
-                <GraduationCap className="h-8 w-8 text-white" />
+              <div className="border-primary border-2 p-3 rounded-full hover:opacity-50">
+                <a href="/">
+                  <Image src="/images/school_logo_enhanced_brightness-no-bg.png" alt="School Logo" width={40} height={40} />
+                </a>
               </div>
             </div>
             <h1 className="text-2xl font-bold text-slate-900">
